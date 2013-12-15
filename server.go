@@ -11,36 +11,36 @@ import(
 
 // Data Struct
 type BadgeAssertion struct {
-  Uid string
-  Recipient IdentityObject
-  Badge string
-  Verify VerificationObject
-  IssuedOn int64
+  Uid string `json:"uid"`
+  Recipient IdentityObject `json:"recipient"`
+  Badge string `json:"badge"`
+  Verify VerificationObject `json:"verify"`
+  IssuedOn int64 `json:"issuedOn"`
 }
 
 type IdentityObject struct {
-  Identity string
-  Type string
-  Hashed bool
-  Salt string
+  Identity string `json:"identity"`
+  Type string `json:"type"`
+  Hashed bool `json:"hashed"`
+  Salt string `json:"salt"`
 }
 
 type VerificationObject struct {
-  Type string
-  URL string
+  Type string `json:"type"`
+  URL string `json:"url"`
 }
 
 type Badge struct {
-  Name string
-  Description string
-  Image string
-  Criteria string
-  Issuer string
+  Name string `json:"name"`
+  Description string `json:"description"`
+  Image string `json:"image"`
+  Criteria string `json:"criteria"`
+  Issuer string `json:"issuer"`
 }
 
 type Issuer struct {
-  Name string
-  URL string
+  Name string `json:"name"`
+  URL string `json:"url"`
 }
 
 // Middware
